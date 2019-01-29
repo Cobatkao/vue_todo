@@ -1,0 +1,68 @@
+* {
+	background: rgba(0, 0, 0, .1);
+	box-sizing: border-box;
+	position: relative;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+.navbar, .header, .footer {
+	text-align: center;
+}
+
+.navbar {
+	grid-area: navbar;
+	background: #db4c3f;
+	color: #f7f3ea;
+}
+
+.navbar > h1 {
+	font-size: 38px;
+}
+
+.header {
+	grid-area: header;
+	color: #555;
+	font-size: 28px;
+	padding: 20px 0;
+}
+
+#task-form {
+	grid-area: task-form;
+}
+
+.task-list-do {
+	grid-area: task-list-do;
+}
+
+.task-list-done {
+	grid-area: task-list-done;
+}
+
+.footer {
+	grid-area: footer;
+	padding: 10px 0;
+	color: #f7f3ea;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 18% auto 18%;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-areas: "navbar navbar navbar"
+						 ". header ."
+						 ". task-form ."
+						 ". task-list-do ."
+						 ". task-list-done ."
+						 "footer footer footer";
+}
+
+input, button {
+	border: 1px solid #db4c3f;
+	border-radius: 3px;
+	padding: 10px 15px;
+}
+
+input {
+	display: block;
+	width: 100%;
+}
